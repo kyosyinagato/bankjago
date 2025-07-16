@@ -6,7 +6,7 @@
 
   <groupId>com.arayx.bankjago</groupId>
   <artifactId>bankjago-parent</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.3</version>
   <packaging>pom</packaging>
 
   <name>BankJago Parent</name>
@@ -14,6 +14,5 @@
 
   <modules>
     <module>bankjago-api</module>
-    <module>bankjago-plugin</module>
   </modules>
 </project>
