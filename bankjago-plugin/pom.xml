@@ -28,7 +28,7 @@
     <dependency>
       <groupId>com.arayx.bankjago</groupId>
       <artifactId>bankjago-api</artifactId>
-      <version>1.0.0</version>
+      <version>1.0.4</version>
     </dependency>
 
     <!-- Paper API -->
