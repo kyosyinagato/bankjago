@@ -21,6 +21,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.ServicePriority;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.plugin.Plugin;
+import org.bukkit.Bukkit;
 
 import java.io.File;
 import java.sql.SQLException;
@@ -110,12 +111,17 @@ public class BankJago extends JavaPlugin {
         pinjamanListener = new PinjamanListener(this, messageManager, pinjamanManager);
 
         getServer().getPluginManager().registerEvents(pinjamanListener, this);
-        Bukkit.getServicesManager().register(BankJagoAPI.class, apiImpl, this);
-
 
         getCommand("bank").setExecutor(new BankCommand(this, messageManager));
         getCommand("bankadmin").setExecutor(new BankAdminCommand(this, messageManager));
         getCommand("bayar").setExecutor(new Bayar(this));
+
+        Bukkit.getServicesManager().register(
+                BankJagoAPI.class,
+                (BankJagoAPI) apiImpl,
+                this,
+                ServicePriority.Normal
+        );
     }
 
     @Override
@@ -190,4 +196,28 @@ public class BankJago extends JavaPlugin {
         }
         return null;
     }
+    public PlayerBankData getPlayerData(UUID uuid) {
+        return playerDataMap.get(uuid);
+    }
+
+    public boolean transfer(UUID from, UUID to, double amount) {
+        PlayerBankData sender = playerDataMap.get(from);
+        PlayerBankData receiver = playerDataMap.get(to);
+
+        if (sender == null || receiver == null) {
+            return false;
+        }
+
+        if (sender.getBalance() < amount) {
+            return false;
+        }
+
+        sender.withdraw((long) amount);
+        receiver.deposit((long) amount);
+
+        savePlayerBankData(from);
+        savePlayerBankData(to);
+        return true;
+    }
+
 }

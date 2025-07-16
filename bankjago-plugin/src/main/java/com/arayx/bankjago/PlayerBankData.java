@@ -57,6 +57,10 @@ public class PlayerBankData {
     public boolean isSuspended() {
         return suspended;
     }
+    public void deposit(long amount) {this.balance += amount;}
+
+    public void withdraw(long amount) {this.balance -= amount;}
+
 
     public void setSuspended(boolean suspended) {
         this.suspended = suspended;

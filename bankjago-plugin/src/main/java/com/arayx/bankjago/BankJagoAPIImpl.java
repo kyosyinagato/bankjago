@@ -19,12 +19,12 @@ public class BankJagoAPIImpl implements BankJagoAPI {
 
     @Override
     public void deposit(UUID playerId, double amount) {
-        plugin.getPlayerData(playerId).deposit(amount);
+        plugin.getPlayerData(playerId).deposit((long) amount);
     }
 
     @Override
     public void withdraw(UUID playerId, double amount) {
-        plugin.getPlayerData(playerId).withdraw(amount);
+        plugin.getPlayerData(playerId).withdraw((long) amount);
     }
 
     @Override

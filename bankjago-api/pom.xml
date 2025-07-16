@@ -1,0 +1,11 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.arayx.bankjago</groupId>
+    <artifactId>bankjago-parent</artifactId>
+    <version>1.0.0</version>
+  </parent>
+
+  <artifactId>bankjago-api</artifactId>
+</project>

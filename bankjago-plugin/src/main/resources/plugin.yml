@@ -1,0 +1,36 @@
+name: BankJago
+main: com.arayx.bankjago.BankJago
+version: 1.0.0
+author: ArayX
+api-version: '1.21'
+description: Plugin Bank & Storage super lengkap untuk server Indonesia
+
+commands:
+  bank:
+    description: Buka menu bank
+    usage: /bank
+  bankadmin:
+    description: Buka menu admin bank
+    usage: /bankadmin
+  bayar:
+    description: Transfer saldo ke pemain lain.
+    usage: /<command> <id> <jumlah> atau /<command> <jumlah>
+
+permissions:
+  bankjago.rank.vip:
+    default: false
+    description: Rank VIP (gaji langit VIP)
+  bankjago.rank.vvip:
+    default: false
+    description: Rank VVIP (gaji langit VVIP)
+  bankjago.admin:
+    default: op
+    description: Semua akses admin bank
+depend:
+  - Vault
+softdepend:
+  - PlaceholderAPI
+  - LuckPerms
+  - CitizenID
+provide:
+  - economy

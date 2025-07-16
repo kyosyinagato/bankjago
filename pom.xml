@@ -5,104 +5,15 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.arayx.bankjago</groupId>
-  <artifactId>bankjago</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <artifactId>bankjago-parent</artifactId>
+  <version>1.0.0</version>
+  <packaging>pom</packaging>
 
-  <name>BankJago</name>
-  <description>Plugin BankJago untuk Minecraft 1.21.6</description>
+  <name>BankJago Parent</name>
+  <description>Parent POM for BankJago plugin and API</description>
 
-  <properties>
-    <maven.compiler.source>21</maven.compiler.source>
-    <maven.compiler.target>21</maven.compiler.target>
-    <paper.api.version>1.21.6-R0.1-SNAPSHOT</paper.api.version>
-  </properties>
-
-  <repositories>
-    <repository>
-      <id>papermc</id>
-      <url>https://repo.papermc.io/repository/maven-public/</url>
-    </repository>
-    <repository>
-      <id>jitpack.io</id>
-      <url>https://jitpack.io</url>
-    </repository>
-  </repositories>
-
-  <dependencies>
-    <!-- Paper API -->
-    <dependency>
-      <groupId>io.papermc.paper</groupId>
-      <artifactId>paper-api</artifactId>
-      <version>${paper.api.version}</version>
-      <scope>provided</scope>
-    </dependency>
-
-      <dependency>
-        <groupId>com.arayx</groupId>
-        <artifactId>bankjago-api</artifactId>
-        <version>1.0-SNAPSHOT</version>
-      </dependency>
-    </dependencies>
-
-    <!-- Vault API -->
-    <dependency>
-      <groupId>com.github.MilkBowl</groupId>
-      <artifactId>VaultAPI</artifactId>
-      <version>1.7</version>
-      <scope>provided</scope>
-    </dependency>
-
-    <!-- AnvilGUI -->
-    <dependency>
-      <groupId>net.wesjd</groupId>
-      <artifactId>anvilgui</artifactId>
-      <version>1.10.6-SNAPSHOT</version>
-      <scope>compile</scope>
-    </dependency>
-  </dependencies>
-
-  <build>
-    <resources>
-      <resource>
-        <directory>src/main/resources</directory>
-        <filtering>false</filtering>
-      </resource>
-    </resources>
-
-    <plugins>
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.11.0</version>
-        <configuration>
-          <release>21</release>
-        </configuration>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-shade-plugin</artifactId>
-        <version>3.5.1</version>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>shade</goal>
-            </goals>
-            <configuration>
-              <relocations>
-                <relocation>
-                  <pattern>net.wesjd.anvilgui</pattern>
-                  <shadedPattern>com.arayx.shaded.anvilgui</shadedPattern>
-                </relocation>
-              </relocations>
-              <minimizeJar>false</minimizeJar>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-
-    </plugins>
-  </build>
-
+  <modules>
+    <module>bankjago-api</module>
+    <module>bankjago-plugin</module>
+  </modules>
 </project>
