@@ -1,0 +1,231 @@
+command:
+  onlyplayer: '&cPerintah ini hanya bisa digunakan oleh pemain.'
+  noperm: '&cKamu tidak memiliki izin untuk melakukan perintah ini.'
+
+error:
+  not-a-number: '&cInput bukan angka yang valid!'
+  insufficient-cash: '&cUang cash Anda tidak cukup untuk mendaftar bank!'
+  invalid-rekening: '&cNomor rekening tidak valid.'
+  minimal-transfer: '&cJumlah transfer minimal adalah {amount}.'
+
+register:
+  input-alias-title: '&aMasukkan Nama Alias Bank Kamu'
+  input-alias-subtitle: '&7Ketik di chat lalu tekan enter.'
+  notenough: '&cUang cash tidak cukup untuk mendaftar bank!'
+  reg-success: |
+    &fPENDAFTARAN AKUN BANK BERHASIL
+    &f===============================
+    &eInformasi pendaftaran akun bank
+    &f&lNama          : &f{alias}
+    &f&lNo Rekening   : &b{norek}
+    &f&lSaldo saat ini: &6{saldo}
+    &f===============================
+
+  gui:
+    title: '&aPendaftaran Bank'
+    button:
+      confirm: '&aDaftar akun Bank'
+      cash: '&6Cash: {cash}'
+      close: '&cTutup'
+    lore:
+      confirm: '&7Klik untuk mendaftar'
+
+confirm:
+  title: '&aKonfirmasi'
+  subtitle: '&7Klik untuk konfirmasi atau batal.'
+  yes_name: '&aYa'
+  no_name: '&cTidak'
+
+notification:
+  deposit-success: |
+    &bSetor tunai berhasil
+    &f=======================
+    &fSaldo bank saat ini : &6{saldosaatini}
+    &f=======================
+    &fLaporan dibuat oleh Indo&cMC
+  withdraw-success: |
+    &bTarik tunai berhasil
+    &f=======================
+    &fSaldo bank saat ini : &6{saldosaatini}
+    &f=======================
+    &fLaporan dibuat oleh Indo&cMC
+  alias-changed: '&aBerhasil mengganti nama dari &e{old} &amenjadi &e{new}.'
+  suspend: '&cBank kamu telah disuspend.'
+  unsuspend: '&aBank telah diaktifkan kembali.'
+
+admin:
+  cash:
+    added-admin: '&aBerhasil menambahkan {amount} cash ke {player}.'
+    reduced-admin: '&cBerhasil mengurangi {amount} cash dari {player}.'
+    added: '&aSaldo cash Anda bertambah sebesar {amount}.'
+    reduced: '&cSaldo cash Anda berkurang sebesar {amount}.'
+  balance:
+    added-admin: '&aBerhasil menambahkan {amount} saldo bank ke {player}.'
+    reduced-admin: '&cBerhasil mengurangi {amount} saldo bank dari {player}.'
+  reload:
+    rel-success: '&aKonfigurasi berhasil dimuat ulang.'
+  delete:
+    del-success: '&aSemua data bank telah dihapus!'
+    wrong: '&cKode konfirmasi salah.'
+    prompt: '&eMasukkan kode konfirmasi untuk menghapus data.'
+
+prompt:
+  enter-alias: '&aMasukkan nama alias baru:'
+  enter-cash-amount: '&aMasukkan jumlah cash:'
+  enter-balance-amount: '&aMasukkan jumlah saldo:'
+  enter-deposit-amount: '&aMasukkan jumlah deposit:'
+  enter-withdraw-amount: '&aMasukkan jumlah withdraw:'
+  confirm-unsuspend: '&aKetik ''confirm'' untuk membuka blokir bank.'
+  enter-delete-code: '&cMasukan kode untuk hapus data.'
+  enter-target-rekening: '&aMasukkan nomor rekening tujuan:'
+
+gui:
+  admin:
+    title: "&6Admin Panel"
+    edit-cash:
+      name: "&eEdit Cash"
+    edit-bank-balance:
+      name: "&eEdit Bank Balance"
+    edit-bank-name:
+      name: "&eEdit Bank Name"
+    unsuspend-bank:
+      name: "&aUnsuspend Bank"
+    suspend-bank:
+      name: "&cSuspend Bank"
+    history-log:
+      name: "&bHistory Log"
+    reload:
+      name: "&dReload Config"
+    delete-data:
+      name: "&4Delete Data"
+
+  main:
+    title: '&aBank Jago'
+    message:
+      no-account: '&cKamu belum mendaftarkan akun bank!'
+      detail:
+        detailbank1: '&bINFORMASI DETAIL AKUN BANK'
+        detailbank2: '&7=============================='
+        detail-name: '&fNama: &e{alias}'
+        detail-norek: '&fNomor Rekening: &b{norek}'
+        detail-saldo: '&fSaldo Bank: &6{saldo}'
+        detailbank3: '&7=============================='
+    button:
+      change-account: '&dGanti Nomer Rekening'
+      deposit: '&aDeposit'
+      withdraw: '&cWithdraw'
+      transfer: '&eTransfer'
+      history: '&bRiwayat'
+      storage: '&dPenyimpanan'
+      pinjaman: '&5Ajukan Pinjaman'
+      detailbank: '&6Detail akun Bank'
+      detailbanklore: '&7Klik untuk melihat detail akun'
+      close: '&cTutup'
+  transfer:
+    title: '&aTransfer Bank'
+    cancelled: '&cTransfer dibatalkan.'
+    button:
+      enter-account: '&aMasukkan Rekening Tujuan'
+      cancel: '&cBatalkan'
+    confirm-lore: '&7Klik untuk konfirmasi transfer.'
+  players:
+    title: '&aDaftar Pemain'
+    entry: '&e%1%'
+    lore:
+      cash: '&7Cash: &f{cash}'
+      balance: '&7Saldo Bank: &f{balance}'
+      click-left: '&aKlik kiri: Tambah saldo'
+      click-right: '&cKlik kanan: Kurangi saldo'
+      click-shift: '&bShift klik: Hapus data'
+  history:
+    title: '&bHistori Bank'
+  storage:
+    title: '&6Storage'
+
+transfer:
+  no-account: '&cAkun bank Anda belum terdaftar.'
+  invalid-target: '&cNomor rekening tujuan tidak ditemukan.'
+  insufficient-funds: '&cSaldo Anda tidak cukup untuk transfer.'
+  receive-notif: '&fKamu menerima transfer sebesar &6{jumlah} &fdari &b{pengirim}.'
+  tf-success: |
+    &aTRANSFER BERHASIL
+    &f===============================
+    &fNo rekening tujuan : &b{norek}
+    &fAtas nama          : &e{alias}
+    &fSebesar            : &6{jumlah}
+    &fWaktu              : &7{waktu}
+    &f===============================
+
+change_account:
+  title: '&aGanti Nomor Rekening'
+  option_random: '&bRandom Nomor Rekening'
+  option_custom: '&aCustom Nomor Rekening'
+  option_back: '&cKembali'
+  choose_source: '&6Pilih Sumber Dana'
+  choose_cash: '&aUang Cash'
+  choose_bank: '&6Saldo Bank'
+  choose_back: '&cKembali'
+  confirm_title: '&eKonfirmasi'
+  confirm_yes: '&aYA'
+  confirm_no: '&cTIDAK'
+  confirm_paper_name: '&eBiaya'
+  confirm_lore: '&7Biaya pergantian nomor rekening adalah Rp.250.000'
+  anvil_title: '&aMasukkan Nomor Rekening Baru'
+  not_enough_cash: '&cUang cash kamu kurang, pastikan cukup!'
+  not_enough_bank: '&cSaldo bank kamu kurang, pastikan cukup!'
+  change-success: '&aBERHASIL MERUBAH NOMOR REKENING'
+  result_header: '&7==================================='
+  result_old: '&eNomor Rekening Lama: &f{old}'
+  result_new: '&eNomor Rekening Baru: &f{new}'
+  result_balance: '&eSaldo Bank: &f{balance}'
+  result_footer: '&7==================================='
+
+loan:
+  all-paid-success: '&aSemua tagihan pinjaman berhasil dilunasi.'
+  cancelled: '&cPengajuan pinjaman dibatalkan.'
+  confirmed: '&aPengajuan pinjaman dikonfirmasi.'
+  no-current: '&cKamu tidak memiliki pinjaman aktif.'
+  not-enough-balance: '&cSaldo bank tidak cukup untuk membayar pinjaman.'
+  paid-success: '&aCicilan pinjaman berhasil dibayar.'
+  gui:
+    title: '&dPinjaman Bank'
+    button:
+      apply: '&aAjukan Pinjaman'
+      current: '&6Tagihan Saat Ini'
+      pay: '&aBayar Tagihan'
+      pay_all: '&aBayar Semua'
+      close: '&cTutup'
+    tagihan_title: '&dTagihan Saat Ini'
+    tagihan_lore1: '&7Jumlah pinjaman: {jumlah}'
+    tagihan_lore2: '&7Sisa cicilan: {sisa_cicilan}'
+    tagihan_paper_name: '&eTagihan'
+  current:
+    header: '&6Detail Pinjaman Aktif'
+    jumlah: '&eJumlah: {jumlah}'
+    cicilan: '&eCicilan: {cicilan}'
+    tempo: '&eTempo: {tempo}'
+    hari: '&eHari ke: {hari}'
+    footer: '&7============================='
+
+registration_cancelled: '&cPendaftaran akun bank dibatalkan.'
+back: '&cKembali'
+back_name: '&cKembali'
+confirm_yes_name: '&aYa'
+confirm_no_name: '&cTidak'
+rekap_name: '&eRekap'
+
+pinjamanmenu:
+  ajukan: '&aAjukan Pinjaman'
+  ajukan_lore:
+    - '&7Klik untuk mengajukan pinjaman baru'
+  tagihan_saat_ini: '&eTagihan Saat Ini'
+  tagihan_saat_ini_lore:
+    - '&7Klik untuk melihat tagihan pinjamanmu saat ini'
+  bayar_semua: '&aBayar Semua'
+  bayar_semua_lore:
+    - '&7Klik untuk melunasi semua pinjaman yang tertunda'
+  gui_title: '&dMenu Pinjaman'
+
+pinjaman:
+  detail_tagihan: '&eDetail Tagihan'
+  tagihan_gui_title: '&dTagihan Saat Ini'
